@@ -1,8 +1,14 @@
 import { serve } from "@hono/node-server";
-import { log } from "console";
 import { Hono } from "hono";
 
-const todos = [
+type todo = {
+  id: number;
+  title: string;
+  content: string;
+  completed: boolean;
+};
+
+const todos: todo[] = [
   {
     id: 1,
     title: "Todo1",
